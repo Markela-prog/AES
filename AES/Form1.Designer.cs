@@ -42,6 +42,8 @@
             this.radioCFB = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.modeSelected = new System.Windows.Forms.Label();
+            this.btnSaveToFile = new System.Windows.Forms.Button();
+            this.btnDecryptFromFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCopy
@@ -183,11 +185,33 @@
             this.modeSelected.TabIndex = 22;
             this.modeSelected.Text = "mode";
             // 
+            // btnSaveToFile
+            // 
+            this.btnSaveToFile.Location = new System.Drawing.Point(594, 170);
+            this.btnSaveToFile.Name = "btnSaveToFile";
+            this.btnSaveToFile.Size = new System.Drawing.Size(194, 29);
+            this.btnSaveToFile.TabIndex = 23;
+            this.btnSaveToFile.Text = "Encrypt and save in file";
+            this.btnSaveToFile.UseVisualStyleBackColor = true;
+            this.btnSaveToFile.Click += new System.EventHandler(this.btnSaveToFile_Click);
+            // 
+            // btnDecryptFromFile
+            // 
+            this.btnDecryptFromFile.Location = new System.Drawing.Point(594, 205);
+            this.btnDecryptFromFile.Name = "btnDecryptFromFile";
+            this.btnDecryptFromFile.Size = new System.Drawing.Size(194, 29);
+            this.btnDecryptFromFile.TabIndex = 24;
+            this.btnDecryptFromFile.Text = "Decrypt from file";
+            this.btnDecryptFromFile.UseVisualStyleBackColor = true;
+            this.btnDecryptFromFile.Click += new System.EventHandler(this.btnDecryptFromFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 509);
+            this.Controls.Add(this.btnDecryptFromFile);
+            this.Controls.Add(this.btnSaveToFile);
             this.Controls.Add(this.modeSelected);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.radioCFB);
@@ -226,5 +250,7 @@
         private RadioButton radioCFB;
         private Label label4;
         private Label modeSelected;
+        private Button btnSaveToFile;
+        private Button btnDecryptFromFile;
     }
 }
